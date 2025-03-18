@@ -8,6 +8,10 @@ app.use(express.json());
 
 let alerts = [];
 
+app.get('/', (_, response) => {
+    response.send('Hello, World!');
+});
+
 app.get('/api/alerts', (_, response) => {
     response.json(alerts);
     alerts = [];
